@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-marquee-infinite: marquee-infinite 35s linear infinite;
+
+  @keyframes marquee-infinite {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); } /* Sab se zaroori point! */
+  }
+}
+
+/* Extra safety taake container flex-row mein hi rahay */
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+}
