@@ -5,12 +5,40 @@
 
   @keyframes marquee-infinite {
     0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); } /* Sab se zaroori point! */
+    100% { transform: translateX(-50%); }
   }
 }
 
-/* Extra safety taake container flex-row mein hi rahay */
 .animate-marquee-infinite {
   display: flex;
   width: max-content;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0F172A; 
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; 
+  overflow-y: auto;  
+}
+
+/* Custom Slate & Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(208, 161, 72, 0.61);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.8); 
 }
